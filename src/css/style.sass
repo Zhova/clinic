@@ -1,0 +1,556 @@
+@font-face
+	font-family: "Ubuntu-Bold"
+	src: url(../fonts/Ubuntu-Bold.ttf) format("truetype")
+@font-face
+	font-family: "Ubuntu-BoldItalic"
+	src: url(../fonts/Ubuntu-BoldItalic.ttf) format("truetype")
+@font-face
+	font-family: "Ubuntu-Italic"
+	src: url(../fonts/Ubuntu-Italic.ttf) format("truetype")
+@font-face
+	font-family: "Ubuntu-Light"
+	src: url(../fonts/Ubuntu-Light.ttf) format("truetype")
+@font-face
+	font-family: "Ubuntu-LightItalic"
+	src: url(../fonts/Ubuntu-LightItalic.ttf) format("truetype")
+@font-face
+	font-family: "Ubuntu-Medium"
+	src: url(../fonts/Ubuntu-Medium.ttf) format("truetype")
+@font-face
+	font-family: "Ubuntu-MediumItalic"
+	src: url(../fonts/Ubuntu-MediumItalic.ttf) format("truetype")
+@font-face
+	font-family: "Ubuntu-Regular"
+	src: url(../fonts/Ubuntu-Regular.ttf) format("truetype")
+
+*, *:after, *:before
+	box-sizing: border-box
+	font-family: 'Ubuntu-Regular'
+	padding: 0
+	margin: 0
+	text-decoration: none
+	color: inherit
+	max-width: 100%
+	font-weight: 300
+	outline: none
+
+ul
+	li
+		list-style: none
+
+a
+	cursor: pointer
+
+.wrap
+	width: 100%
+	max-width: 1146px
+	margin: 0 auto
+
+.slick
+	&-slider
+		*
+			max-width: none
+
+.default-slider__arrow
+	border: 1px solid #D1EAFF
+	background: #F7FBFF
+	position: absolute
+	bottom: -80px
+	color: #00386D
+	font-size: 15px
+	line-height: 17px
+	font-family: Ubuntu-Bold !important
+	cursor: pointer
+	&::before
+		content: ''
+		position: absolute
+		width: 11px
+		height: 20px
+		top: 50%
+		transform: translateY(-50%)
+		position: absolute
+		background-image: url("data:image/svg+xml,%3Csvg width='12' height='20' viewBox='0 0 12 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.1731 9.45117L1.92252 0.226167C1.61944 -0.0759023 1.12874 -0.0753945 0.826162 0.227729C0.52382 0.530814 0.524601 1.02179 0.827725 1.32409L9.52769 10L0.827412 18.6759C0.524327 18.9783 0.523546 19.4689 0.82585 19.7721C0.977529 19.924 1.17624 20 1.37495 20C1.57315 20 1.77108 19.9245 1.92249 19.7736L11.1731 10.5489C11.3191 10.4036 11.401 10.206 11.401 10C11.401 9.7941 11.3189 9.59668 11.1731 9.45117Z' fill='%23F87373'/%3E%3C/svg%3E%0A")
+	&-left
+		padding-left: 60px
+		&::before
+			left: 20px
+			transform: translateY(-50%) rotate(180deg)
+	&-right
+		padding-right: 60px
+		right: 0
+		&::before
+			right: 20px
+
+	&-dots
+		display: flex
+		flex-direction: column
+		position: absolute
+		right: 23px
+		top: 50%
+		transform: translateY(-50%)
+		width: 42px
+		align-items: center
+		li
+			width: 40px
+			height: 40px
+			position: relative
+			border-radius: 50%
+			border: 1px solid #ffffff
+			margin-bottom: 14px
+			&::before
+				content: ''
+				position: absolute
+				left: 50%
+				top: 50%
+				transform: translate(-50%, -50%)
+				background: #ffffff
+				width: 24px
+				height: 24px
+				border-radius: 50%
+			.dots-button-wrap
+				background: transparent
+				border: 0
+				position: absolute
+				left: 50%
+				top: 50%
+				transform: translate(-50%, -50%)
+				&::before
+					content: ''
+					position: absolute
+					left: 50%
+					bottom: -35px
+					transform: translateX(-50%)
+					height: 40px
+					width: 3px
+					background: #fff
+
+			&:last-of-type
+				margin-bottom: 0
+				.dots-button-wrap
+					&::before
+						display: none
+		.slick-active
+			&::after
+				content: ''
+				position: absolute
+				left: 50%
+				top: 50%
+				transform: translate(-50%, -50%)
+				background: #F87373
+				width: 16px
+				height: 16px
+				border-radius: 50%
+
+.lang,.phones-drop
+	position: relative
+	padding-right: 11px
+	&::after
+		content: ''
+		position: absolute
+		right: 0px
+		top: 50%
+		transform: translateY(-50%)
+		width: 7px
+		height: 4px
+		cursor: pointer
+		background-image: url("data:image/svg+xml,%3Csvg width='8' height='4' viewBox='0 0 8 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.114444 0.334315L0.348838 0.110943C0.422606 0.0411838 0.520751 0.00275299 0.625643 0.00275299C0.730478 0.00275299 0.828739 0.0411838 0.902507 0.110943L3.57631 2.64154L6.25321 0.108135C6.32686 0.0383758 6.42512 0 6.52995 0C6.63479 0 6.73311 0.0383758 6.80682 0.108135L7.04127 0.330131C7.19393 0.474494 7.19393 0.709649 7.04127 0.854012L3.85411 3.88118C3.78046 3.95089 3.68231 4 3.57655 4H3.57533C3.47043 4 3.37229 3.95083 3.29864 3.88118L0.114444 0.862216C0.0406756 0.792512 0.000184059 0.69682 6.77109e-05 0.597605C6.77109e-05 0.498334 0.0406756 0.403964 0.114444 0.334315Z' fill='%23F87373'/%3E%3C/svg%3E%0A")
+
+.btn
+	display: inline-block
+	&_default
+		border-radius: 40px
+		font-family: Ubuntu-Medium
+	&_red
+		background: #F87373
+		color: #fff
+	&_white
+		background: #ffffff
+		color: #00386D
+	&_big
+		padding: 12px 25px
+		text-align: center
+		min-width: 166px
+		min-height: 43px
+	&_slider
+		position: relative
+		left: 50%
+		transform: translateX(-50%)
+
+.del
+	&_left
+		width: 165px
+		padding: 9px 0
+		position: relative
+		margin: 30px 0
+		&::after
+			width: 100%
+			height: 1px
+			right: 0
+		&::before
+			width: 18px
+			height: 18px
+			left: 0
+			border-radius: 50%
+		&::before,&::after
+			content: ''
+			background: #ffffff
+			top: 50%
+			transform: translateY(-50%)
+			position: absolute
+
+.text
+	line-height: 1
+	&_gray
+		color: #556575
+	&_blue
+		color: #00386D
+	&_medium
+		font-family: Ubuntu-Bold
+	&_regular
+		font-size: 16px
+	&_title
+		font-size: 20px
+	&_title-big
+		font-size: 40px
+	&_dark-blue
+		color: #001932
+	&_small-extra
+		font-size: 13px
+
+.title-default
+	display: flex
+	flex-direction: column
+	align-items: center
+	margin-bottom: 30px
+	&__title
+		margin-bottom: 21px
+	&__del
+		width: 362px
+		height: 1px
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			width: 18px
+			height: 18px
+			left: 50%
+			top: 50%
+			border-radius: 50%
+			transform: translate(-50%, -50%)
+		&_turquoise
+			background: linear-gradient(90deg, rgba(210,234,255,0) 0%, rgba(210,234,255,1) 25%, rgba(210,234,255,1) 75%, rgba(210,234,255,0) 100%)
+			&::after
+				background: #D2EAFF
+		&_white
+			background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 75%, rgba(255,255,255,0) 100%)
+			&::after
+				background: #ffffff
+
+.header
+	&-top,&-bottom
+		display: flex
+		align-items: center
+	.right
+		display: flex
+		justify-content: space-between
+		align-items: center
+		width: 35%
+
+	.addresses
+		display: flex
+		justify-content: space-between
+		align-items: center
+		width: 45%
+	.address
+		padding-left: 25px
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			left: 0
+			top: 50%
+			transform: translateY(-50%)
+			width: 13px
+			height: 18px
+			background-image: url("data:image/svg+xml,%3Csvg width='14' height='18' viewBox='0 0 14 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.00012 0C10.5947 0 13.519 2.92437 13.519 6.51888C13.519 10.9798 7.68525 17.5287 7.43687 17.8053C7.20357 18.0651 6.79625 18.0646 6.56338 17.8053C6.315 17.5287 0.481207 10.9798 0.481207 6.51888C0.481277 2.92437 3.40561 0 7.00012 0ZM7.00012 9.79871C8.80863 9.79871 10.2799 8.32739 10.2799 6.51888C10.2799 4.71037 8.8086 3.23909 7.00012 3.23909C5.19165 3.23909 3.72036 4.71041 3.72036 6.51892C3.72036 8.32743 5.19165 9.79871 7.00012 9.79871Z' fill='%23F87373'/%3E%3C/svg%3E%0A")
+	.social
+		&__item
+			margin-right: 15px
+			&:last-child
+				margin-right: 0
+	.nav
+		&-menu
+			flex: 1 1 auto
+		&-list
+			display: flex
+			justify-content: space-between
+			margin: 0 50px
+	&-top
+		justify-content: space-between
+		min-height: 50px
+	&-bottom
+		min-height: 80px
+		justify-content: space-between
+
+.main-bg
+	background: url('../img/mainBG.png')
+	// height: 600px
+
+.main-slider
+	&__item
+		display: flex !important
+
+	&__desc
+		margin-bottom: 30px
+
+	.left
+		width: 45%
+		display: flex
+		flex-direction: column
+		justify-content: center
+	.right
+		width: 55%
+
+	.img-block
+		width: 100%
+		height: 100%
+		img
+			object-fit: cover
+			height: 100%
+			width: 100%
+	&__arrow
+		position: absolute
+		top: 50%
+		border-radius: 50%
+		transform: translateY(-50%)
+		width: 50px
+		height: 50px
+		background: #fff
+		cursor: pointer
+		z-index: 2
+		&::before
+			content: ''
+			position: absolute
+			width: 11px
+			height: 20px
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			background-image: url("data:image/svg+xml,%3Csvg width='12' height='20' viewBox='0 0 12 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.1731 9.45117L1.92252 0.226167C1.61944 -0.0759023 1.12874 -0.0753945 0.826162 0.227729C0.52382 0.530814 0.524601 1.02179 0.827725 1.32409L9.52769 10L0.827412 18.6759C0.524327 18.9783 0.523546 19.4689 0.82585 19.7721C0.977529 19.924 1.17624 20 1.37495 20C1.57315 20 1.77108 19.9245 1.92249 19.7736L11.1731 10.5489C11.3191 10.4036 11.401 10.206 11.401 10C11.401 9.7941 11.3189 9.59668 11.1731 9.45117Z' fill='%23F87373'/%3E%3C/svg%3E%0A")
+			position: absolute
+		&-left
+			left: -8%
+			transform: translateY(-50%) rotate(180deg)
+
+		&-right
+			right: -8%
+
+	&__btn-block
+		.btn
+			&:first-child
+				margin-right: 20px
+.popularDest
+	padding: 100px 0
+	&-slider
+		margin-bottom: 40px
+		&__item
+			display: flex !important
+			flex-direction: column
+			align-items: center
+
+.destinations-item
+	background: #D5EBFF
+	border-radius: 20px
+	overflow: hidden
+	max-width: 264px
+	min-height: 213px
+	margin-bottom: 30px
+	&:last-child
+		margin-bottom: 0
+	&__title
+		&-block
+			min-height: 73px
+			padding: 10px 16px
+			display: flex
+			justify-content: space-between
+			align-items: center
+	&__show
+		width: 36px
+		height: 36px
+		background: #ffffff
+		border-radius: 50%
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%)
+			width: 14px
+			height: 14px
+			background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M13.1957 6.44852H0.694592C0.389981 6.44852 0.143066 6.69559 0.143066 7.00004C0.143066 7.3045 0.389954 7.55157 0.694592 7.55157H13.1957C13.5003 7.55157 13.7472 7.30468 13.7472 7.00004C13.7472 6.69541 13.5003 6.44852 13.1957 6.44852Z' fill='%2300386D'/%3E%3Cpath d='M13.6958 6.6099L8.29106 1.20498C8.07559 0.989698 7.72668 0.989698 7.51121 1.20498C7.29574 1.42045 7.29574 1.76974 7.51121 1.98502L12.526 6.99999L7.51121 12.015C7.29574 12.2303 7.29574 12.5796 7.51121 12.7948C7.61894 12.9026 7.75995 12.9564 7.90114 12.9564C8.04232 12.9564 8.18333 12.9026 8.29106 12.7948L13.6958 7.38994C13.9112 7.17447 13.9112 6.82515 13.6958 6.6099Z' fill='%2300386D'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='13.7143' height='13.7143' fill='white' transform='translate(0.143066 0.142853)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A")
+		&:hover
+			background: #F87373
+			&::after
+				background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M13.1957 6.44852H0.694592C0.389981 6.44852 0.143066 6.69559 0.143066 7.00004C0.143066 7.3045 0.389954 7.55157 0.694592 7.55157H13.1957C13.5003 7.55157 13.7472 7.30468 13.7472 7.00004C13.7472 6.69541 13.5003 6.44852 13.1957 6.44852Z' fill='white'/%3E%3Cpath d='M13.6958 6.6099L8.29106 1.20498C8.07559 0.989698 7.72668 0.989698 7.51121 1.20498C7.29574 1.42045 7.29574 1.76974 7.51121 1.98502L12.526 6.99999L7.51121 12.015C7.29574 12.2303 7.29574 12.5796 7.51121 12.7948C7.61894 12.9026 7.75995 12.9564 7.90114 12.9564C8.04232 12.9564 8.18333 12.9026 8.29106 12.7948L13.6958 7.38994C13.9112 7.17447 13.9112 6.82515 13.6958 6.6099Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='13.7143' height='13.7143' fill='white' transform='translate(0.143066 0.142853)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A")
+.whyChoice
+	display: flex
+	&__left,&__right
+		width: 50%
+	&__right
+		padding-top: 145px
+	&-bg
+		background: url('../img/choiceBG.png')
+	&-list
+		&__item
+			display: flex
+			align-items: center
+			margin-bottom: 30px
+			&:last-of-type
+				&::after
+					display: none
+				.whyChoice-list__img-block::after
+					display: none
+		&__img-block
+			width: 80px
+			height: 80px
+			background: #F3F9FF
+			border-radius: 20px
+			margin-right: 24px
+			display: flex
+			align-items: center
+			justify-content: center
+			position: relative
+			&::after
+				content: ''
+				position: absolute
+				width: 2px
+				background: #F3F9FF
+				height: 40px
+				left: 50%
+				transform: translateX(-50%)
+				bottom: -35px
+
+		&__text
+			flex: 1 1
+		&__title
+			margin-bottom: 5px
+
+.specialists
+	padding: 90px 0
+	&-slider
+		margin-bottom: 40px
+	&-item
+		width: 264px
+		position: relative
+		border-radius: 20px
+		overflow: hidden
+		&__gradient
+			background: linear-gradient(180deg, rgba(197, 228, 255, 0) 0%, #C5E4FF 34.17%, #C5E4FF 100%)
+			height: 280px
+			width: 100%
+			position: absolute
+			bottom: -60px
+			transition: .5s
+		&__text
+			position: relative
+			padding: 0 18px
+			padding-bottom: 30px
+		&__title
+			margin-bottom: 22px
+			max-width: 180px
+		&__desc
+			opacity: 0.6
+		.about-doc
+			opacity: 0
+			transition: .5s
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			position: absolute
+			padding-right: 57px
+			&::after
+				content: ''
+				position: absolute
+				right: 30px
+				top: 50%
+				transform: translateY(-50%)
+				width: 14px
+				height: 14px
+				background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M13.1957 6.44852H0.694592C0.389981 6.44852 0.143066 6.69559 0.143066 7.00004C0.143066 7.3045 0.389954 7.55157 0.694592 7.55157H13.1957C13.5003 7.55157 13.7472 7.30468 13.7472 7.00004C13.7472 6.69541 13.5003 6.44852 13.1957 6.44852Z' fill='white'/%3E%3Cpath d='M13.6958 6.6099L8.29106 1.20498C8.07559 0.989698 7.72668 0.989698 7.51121 1.20498C7.29574 1.42045 7.29574 1.76974 7.51121 1.98502L12.526 6.99999L7.51121 12.015C7.29574 12.2303 7.29574 12.5796 7.51121 12.7948C7.61894 12.9026 7.75995 12.9564 7.90114 12.9564C8.04232 12.9564 8.18333 12.9026 8.29106 12.7948L13.6958 7.38994C13.9112 7.17447 13.9112 6.82515 13.6958 6.6099Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='13.7143' height='13.7143' fill='white' transform='translate(0.143066 0.142853)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A")
+
+		&:hover
+			.specialists-item__gradient
+				bottom: 0
+				transition: .5s
+			.about-doc
+				opacity: 1
+				transition: .5s
+.about
+	display: flex
+	justify-content: space-between
+	&-bg
+		background: url('../img/choiceBG.png')
+		padding-top: 140px
+		padding-bottom: 110px
+	&__left,&__right
+		width: 47%
+		position: relative
+	&__left
+		padding-top: 30px
+	&__desc-block
+		p
+			font-size: 16px
+			line-height: 19px
+			color: #556575
+			margin-bottom: 20px
+			&:last-child
+				margin-bottom: 25px
+	&__img-block
+		position: absolute
+		&_first
+			width: 414px
+			height: 287px
+		&_second
+			width: 276px
+			height: 200px
+			right: 0
+			bottom: 30px
+
+.news
+	padding: 110px 0
+	&-slider
+		margin-bottom: 40px
+		&__item
+			display: flex !important
+			justify-content: center
+
+	&-item
+		border-radius: 20px
+		overflow: hidden
+		max-width: 362px
+		width: 100%
+		&__img-block
+			width: 100%
+			height: 170px
+			img
+				object-fit: cover
+				width: 100%
+				height: 100%
+
+		&__text
+			background: #D2EAFF
+			padding: 25px 20px
+		&__title
+			margin-bottom: 15px
+		&__desc
+			margin-bottom: 15px
+		&__footer
+			display: flex
+			justify-content: space-between
+		&__date,&__more
+			font-size: 15px
+			color: #00386D
+		&__more
+			color: #F87373
+			text-decoration: underline

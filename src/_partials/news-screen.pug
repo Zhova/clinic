@@ -1,0 +1,18 @@
+include ./news-item.pug
+
+mixin news-screen
+    +b.news-bg
+        +b.news.wrap
+            +b.title-default
+                +e.P.title.text_blue.text_medium.text_title-big Cпециалисты
+                +e.del_turquoise
+            +b.news-slider
+                +e.item
+                    +news-item
+                +e.item
+                    +news-item
+                +e.item
+                    +news-item
+                +e.item
+                    +news-item
+            +b.A.btn_default.btn_red.btn_big.btn_slider(href="#") Запись онлайн

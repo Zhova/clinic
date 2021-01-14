@@ -1,0 +1,36 @@
+mixin header
+	+b.HEADER.header.wrap
+		+b.header-top
+			+b.addresses
+				+e.first.address Киев, ул. Братиславская, 14-Б
+				+e.second.address Киев, ул. Волошская, 51/27
+			+b.right
+				+b.lang
+					+e.A.item UA
+				+b.phones-drop
+					+e.A.item +38 (067) 410 44 55
+				+b.social
+					+e.A.item(href="#")
+						img(src='./img/insta.svg')
+					+e.A.item(href="#")
+						img(src='./img/insta.svg')
+				+b.search search
+		+b.header-bottom
+			+b.A.logo(href="#")
+				img(src='./img/logo.png')
+			+b.NAV.nav-menu
+				+b.UL.nav-list
+					+e.Li.item
+						a(href="#") Направления
+					+e.Li.item
+						a(href="#") Специалисты
+					+e.Li.item
+						a(href="#") Анализы
+					+e.Li.item
+						a(href="#") Цены
+					+e.Li.item
+						a(href="#") Новости
+					+e.Li.item
+						a(href="#") Контакты
+			+b.A.btn_default.btn_red.btn_big(href="#") Запись онлайн
+				

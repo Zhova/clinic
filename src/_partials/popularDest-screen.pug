@@ -1,0 +1,26 @@
+include ./destinations-item.pug
+
+
+mixin popularDest-screen
+    +b.popularDest-bg
+        +b.popularDest.wrap
+            +b.title-default
+                +e.P.title.text_blue.text_medium.text_title-big Популярные направления
+                +e.del_turquoise
+            +b.popularDest-slider
+                +e.item
+                    +destinations-item
+                    +destinations-item
+                +e.item
+                    +destinations-item
+                    +destinations-item
+                +e.item
+                    +destinations-item
+                    +destinations-item
+                +e.item
+                    +destinations-item
+                    +destinations-item
+                +e.item
+                    +destinations-item
+                    +destinations-item
+            +b.A.btn_default.btn_red.btn_big.btn_slider(href="#") Запись онлайн

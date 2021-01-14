@@ -1,0 +1,79 @@
+
+// =============== large
+@media screen and (max-width: 1350px)
+
+    .main-slider
+        &__arrow
+            &-right
+                right: -5%
+            &-left
+                left: -5%
+
+    .news
+        &-slider
+
+            &-item
+                max-width: 320px
+
+// =============== tablet 
+@media screen and (max-width: 1199px)
+
+    .text
+        &_medium
+            font-family: Ubuntu-Medium
+        &_regular
+            font-size: 14px
+
+    .del_left
+        margin: 15px 0
+
+    .slick-dots
+        transform: rotate(-90deg) translateY(-50%)
+        top: auto
+        bottom: 20px
+        right: auto
+        left: 50%
+        li
+            width: 16px
+            height: 16px
+            &::before
+                width: 11px
+                height: 11px
+            .dots-button-wrap
+                &::before
+                    width: 2px
+                    bottom: -25px
+        .slick-active
+            &::after
+                width: 8px
+                height: 8px
+
+    .wrap
+        width: 95%
+    .main
+        padding-top: 44px
+        &-slider
+            &__item
+                flex-direction: column
+                align-items: center
+                .right,.left
+                    width: 100%
+
+            &__title
+                font-size: 24px
+                max-width: 320px
+            &__desc
+                max-width: 500px
+
+            &__arrow
+                top: auto
+                bottom: 20px
+                transform: translate(0)
+                &-right
+                    right: 20px
+                &-left
+                    left: 20px
+                    transform: translate(0) rotate(180deg)
+
+// =============== mobile
+// @media screen and (max-width: 767px)

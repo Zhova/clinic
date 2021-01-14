@@ -1,0 +1,20 @@
+include ./specialists-item.pug
+
+mixin specialists-screen
+    +b.specialists-bg
+        +b.specialists.wrap
+            +b.title-default
+                +e.P.title.text_blue.text_medium.text_title-big Cпециалисты
+                +e.del_turquoise
+            +b.specialists-slider
+                +e.item
+                    +specialists-item
+                +e.item
+                    +specialists-item
+                +e.item
+                    +specialists-item
+                +e.item
+                    +specialists-item
+                +e.item
+                    +specialists-item
+            +b.A.btn_default.btn_red.btn_big.btn_slider(href="#") Запись онлайн
