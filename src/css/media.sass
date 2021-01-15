@@ -11,7 +11,6 @@
 
     .news
         &-slider
-
             &-item
                 max-width: 320px
 
@@ -19,11 +18,18 @@
 @media screen and (max-width: 1199px)
 
     .text
-        &_medium
-            font-family: Ubuntu-Medium
         &_regular
+            font-size: 12px
+        &_title
+            font-size: 17px
+            &-medium
+                font-size: 20px
+            &-big
+                font-size: 26px
+        &_small
             font-size: 14px
-
+            &-extra
+                font-size: 13px
     .del_left
         margin: 15px 0
 
@@ -50,6 +56,10 @@
 
     .wrap
         width: 95%
+
+    .header
+        .addresses,.right
+            width: auto
     .main
         padding-top: 44px
         &-slider
@@ -75,5 +85,96 @@
                     left: 20px
                     transform: translate(0) rotate(180deg)
 
+    .specialists,
+    .popularDest,
+    .about-bg,
+    .news,
+    .reviews,
+    .connection,
+    .contacts
+        padding: 50px 0
+
+    .whyChoice
+        &__left
+            .img-block
+                position: relative
+                height: 100%
+                img
+                    position: absolute
+                    bottom: 0
+        &__right
+            padding-top: 40px
+    .specialists-slider__item,.reviews-slider__item
+        display: flex !important
+        justify-content: center
+
+    .about
+        &__desc-block
+            p
+                font-size: 13px
+
+    .services-destinations
+        &-list
+            justify-content: center
+        .destinations-item
+            &:nth-child(4n+4)
+                margin-right: 2.4%
+
 // =============== mobile
-// @media screen and (max-width: 767px)
+@media screen and (max-width: 767px)
+
+    .default-slider__arrow
+        font-size: 0
+        min-width: 50px
+        min-height: 50px
+        padding: 0
+        bottom: -86px
+        &::before
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+        &-left
+            &::before
+                transform: translate(-50%, -50%) rotate(180deg)
+    .whyChoice
+        flex-direction: column-reverse
+        &__left,&__right
+            width: 100%
+            .img-block
+                img
+                    position: static
+
+    .about
+        flex-direction: column
+        &-bg
+            padding-bottom: 130px
+        &__left,&__right
+            width: 100%
+        &__img-block
+            &_first
+                width: auto
+                height: auto
+                position: static
+
+            &_second
+                position: absolute
+                bottom: -100px
+                left: 50%
+                transform: translateX(-50%)
+
+    .connection
+        .form-wrap
+            margin-left: 0
+            padding: 30px 20px
+    .contacts-card
+        &_first,&_second
+            flex-direction: column
+
+        &__left,&__right
+            width: 100%
+        &__left
+            padding: 30px 20px
+        &__map
+            min-height: 400px
+            iframe
+                min-height: 400px
