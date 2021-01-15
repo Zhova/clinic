@@ -214,8 +214,10 @@ a
 		font-size: 40px
 	&_dark-blue
 		color: #001932
-	&_small-extra
-		font-size: 13px
+	&_small
+		font-size: 14px
+		&-extra
+			font-size: 13px
 
 .title-default
 	display: flex
@@ -545,6 +547,58 @@ a
 			margin-bottom: 15px
 		&__desc
 			margin-bottom: 15px
+		&__footer
+			display: flex
+			justify-content: space-between
+		&__date,&__more
+			font-size: 15px
+			color: #00386D
+		&__more
+			color: #F87373
+			text-decoration: underline
+.reviews
+	padding: 110px 0
+	&-bg
+		background: url('../img/reviewsBG.png')
+	&-slider
+		margin-bottom: 40px
+	&-item
+		background: #fff
+		border-radius: 20px
+		padding: 20px
+		max-width: 362px
+		position: relative
+
+		&::before
+			content: ''
+			position: absolute
+			right: 25px
+			top: 25px
+			background: url('../img/quote.png')
+			width: 49px
+			height: 49px
+		&__header
+			display: flex
+			align-items: center
+			margin-bottom: 20px
+		&__avatar
+			width: 54px
+			height: 54px
+			border-radius: 50%
+			overflow: hidden
+			margin-right: 13px
+			img
+				object-fit: cover
+				width: 100%
+				height: 100%
+		&__name
+			margin-bottom: 7px
+		&__stars
+			display: flex
+			img
+				margin-right: 4px
+		&__desc
+			margin-bottom: 30px
 		&__footer
 			display: flex
 			justify-content: space-between

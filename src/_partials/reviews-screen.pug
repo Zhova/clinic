@@ -1,0 +1,21 @@
+include reviews-item.pug
+
+
+mixin reviews-screen
+    +b.reviews-bg
+        +b.reviews.wrap
+            +b.title-default
+                +e.P.title.text_blue.text_medium.text_title-big Отзывы пациентов
+                +e.del_white
+            +b.reviews-slider
+                +e.item
+                    +reviews-item
+                +e.item
+                    +reviews-item
+                +e.item
+                    +reviews-item
+                +e.item
+                    +reviews-item
+                +e.item
+                    +reviews-item
+            +b.A.btn_default.btn_red.btn_big.btn_slider(href="#") Запись онлайн
