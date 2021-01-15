@@ -1,8 +1,14 @@
 include ./services-destinations.pug
 include ./whyChoice-screen.pug
+include ./connection-screen.pug
+include ./contacts-screen.pug
+
+
 
 
 mixin services_page
     +b.services_page-bg
         +services-destinations
         +whyChoice-screen
+        +connection-screen
+        +contacts-screen
