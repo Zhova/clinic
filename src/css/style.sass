@@ -197,6 +197,10 @@ a
 			top: 50%
 			transform: translateY(-50%)
 			position: absolute
+	&_plain
+		background: linear-gradient(90deg, rgba(210,234,255,1) 40%, rgba(210,234,255,0) 70%)
+		width: 100%
+		height: 2px
 
 .text
 	line-height: 1
@@ -210,8 +214,10 @@ a
 		font-size: 16px
 	&_title
 		font-size: 20px
-	&_title-big
-		font-size: 40px
+		&-medium
+			font-size: 24px
+		&-big
+			font-size: 40px
 	&_dark-blue
 		color: #001932
 	&_small
@@ -608,3 +614,66 @@ a
 		&__more
 			color: #F87373
 			text-decoration: underline
+.contacts
+	padding-top: 120px
+	padding-bottom: 90px
+	&-bg
+		background: url('../img/contactsBG.png')
+	&-card
+		display: flex
+		background: #ffffff
+		border-radius: 20px
+		overflow: hidden
+		&_first
+			margin-bottom: 60px
+		&_second
+			flex-direction: row-reverse
+		&__left
+			width: 45%
+			padding: 50px 40px
+		&__right
+			width: 55%
+
+		&__title
+			margin-bottom: 30px
+		&__scheduling
+			&::before
+				background: url('../img/clock.svg')
+		&__phones
+			&::before
+				background: url('../img/phone.svg')
+		&__mail
+			&::before
+				background: url('../img/mail.svg')
+		&__mail
+			&::before
+				background: url('../img/mail.svg')
+		&__address
+			&::before
+				background: url('../img/pin-map_contacts.svg')
+		&__map
+			width: 100%
+			height: 100%
+			iframe
+				height: 100%
+				width: 100%
+
+	&-item
+		min-height: 80px
+		display: flex
+		flex-direction: column
+		justify-content: center
+		max-width: 385px
+		padding-left: 42px
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			left: 0
+			width: 28px
+			height: 28px
+			background-repeat: no-repeat !important
+
+		a,p
+			display: block
+			line-height: 22px
