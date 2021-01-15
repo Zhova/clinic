@@ -50,37 +50,6 @@ a
 	&-slider
 		*
 			max-width: none
-
-.default-slider__arrow
-	border: 1px solid #D1EAFF
-	background: #F7FBFF
-	position: absolute
-	bottom: -80px
-	color: #00386D
-	font-size: 15px
-	line-height: 17px
-	font-family: Ubuntu-Bold !important
-	cursor: pointer
-	&::before
-		content: ''
-		position: absolute
-		width: 11px
-		height: 20px
-		top: 50%
-		transform: translateY(-50%)
-		position: absolute
-		background-image: url("data:image/svg+xml,%3Csvg width='12' height='20' viewBox='0 0 12 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.1731 9.45117L1.92252 0.226167C1.61944 -0.0759023 1.12874 -0.0753945 0.826162 0.227729C0.52382 0.530814 0.524601 1.02179 0.827725 1.32409L9.52769 10L0.827412 18.6759C0.524327 18.9783 0.523546 19.4689 0.82585 19.7721C0.977529 19.924 1.17624 20 1.37495 20C1.57315 20 1.77108 19.9245 1.92249 19.7736L11.1731 10.5489C11.3191 10.4036 11.401 10.206 11.401 10C11.401 9.7941 11.3189 9.59668 11.1731 9.45117Z' fill='%23F87373'/%3E%3C/svg%3E%0A")
-	&-left
-		padding-left: 60px
-		&::before
-			left: 20px
-			transform: translateY(-50%) rotate(180deg)
-	&-right
-		padding-right: 60px
-		right: 0
-		&::before
-			right: 20px
-
 	&-dots
 		display: flex
 		flex-direction: column
@@ -141,6 +110,36 @@ a
 				height: 16px
 				border-radius: 50%
 
+.default-slider__arrow
+	border: 1px solid #D1EAFF
+	background: #F7FBFF
+	position: absolute
+	bottom: -80px
+	color: #00386D
+	font-size: 15px
+	line-height: 17px
+	font-family: Ubuntu-Bold !important
+	cursor: pointer
+	&::before
+		content: ''
+		position: absolute
+		width: 11px
+		height: 20px
+		top: 50%
+		transform: translateY(-50%)
+		position: absolute
+		background-image: url("data:image/svg+xml,%3Csvg width='12' height='20' viewBox='0 0 12 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.1731 9.45117L1.92252 0.226167C1.61944 -0.0759023 1.12874 -0.0753945 0.826162 0.227729C0.52382 0.530814 0.524601 1.02179 0.827725 1.32409L9.52769 10L0.827412 18.6759C0.524327 18.9783 0.523546 19.4689 0.82585 19.7721C0.977529 19.924 1.17624 20 1.37495 20C1.57315 20 1.77108 19.9245 1.92249 19.7736L11.1731 10.5489C11.3191 10.4036 11.401 10.206 11.401 10C11.401 9.7941 11.3189 9.59668 11.1731 9.45117Z' fill='%23F87373'/%3E%3C/svg%3E%0A")
+	&-left
+		padding-left: 60px
+		&::before
+			left: 20px
+			transform: translateY(-50%) rotate(180deg)
+	&-right
+		padding-right: 60px
+		right: 0
+		&::before
+			right: 20px
+
 .lang,.phones-drop
 	position: relative
 	padding-right: 11px
@@ -155,7 +154,34 @@ a
 		cursor: pointer
 		background-image: url("data:image/svg+xml,%3Csvg width='8' height='4' viewBox='0 0 8 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.114444 0.334315L0.348838 0.110943C0.422606 0.0411838 0.520751 0.00275299 0.625643 0.00275299C0.730478 0.00275299 0.828739 0.0411838 0.902507 0.110943L3.57631 2.64154L6.25321 0.108135C6.32686 0.0383758 6.42512 0 6.52995 0C6.63479 0 6.73311 0.0383758 6.80682 0.108135L7.04127 0.330131C7.19393 0.474494 7.19393 0.709649 7.04127 0.854012L3.85411 3.88118C3.78046 3.95089 3.68231 4 3.57655 4H3.57533C3.47043 4 3.37229 3.95083 3.29864 3.88118L0.114444 0.862216C0.0406756 0.792512 0.000184059 0.69682 6.77109e-05 0.597605C6.77109e-05 0.498334 0.0406756 0.403964 0.114444 0.334315Z' fill='%23F87373'/%3E%3C/svg%3E%0A")
 
+select,input
+	background: #FFFFFF
+	box-shadow: 0px 4px 30px rgba(1, 47, 86, 0.1)
+	border-radius: 8px
+	padding: 11px 0
+	padding-left: 40px
+	width: 100%
+	border: 0
+	font-size: 16px
+	line-height: 19px
+	color: #00386D
+	margin-bottom: 20px
+	&::placeholder
+		font-size: 16px
+		line-height: 19px
+		color: #00386D
+
+select
+	overflow: hidden
+	-webkit-appearance: none
+	-moz-appearance: none
+
+select > option
+	background-color: transparent
+	border: 0
+
 .btn
+	cursor: pointer
 	display: inline-block
 	&_default
 		border-radius: 40px
@@ -204,12 +230,6 @@ a
 
 .text
 	line-height: 1
-	&_gray
-		color: #556575
-	&_blue
-		color: #00386D
-	&_medium
-		font-family: Ubuntu-Bold
 	&_regular
 		font-size: 16px
 	&_title
@@ -218,12 +238,18 @@ a
 			font-size: 24px
 		&-big
 			font-size: 40px
-	&_dark-blue
-		color: #001932
 	&_small
 		font-size: 14px
 		&-extra
 			font-size: 13px
+	&_gray
+		color: #556575
+	&_blue
+		color: #00386D
+	&_dark-blue
+		color: #001932
+	&_medium
+		font-family: Ubuntu-Bold
 
 .title-default
 	display: flex
@@ -677,3 +703,28 @@ a
 		a,p
 			display: block
 			line-height: 22px
+
+.connection
+	padding-top: 140px
+	padding-bottom: 100px
+	&-bg
+		background: url('../img/formBG.png')
+		background-size: cover
+	.form-wrap
+		margin-left: 75px
+		background: #C8E5FF
+		max-width: 450px
+		border-radius: 20px
+		padding: 50px 45px
+
+.services-destinations
+	padding: 110px 0
+	&-list
+		display: flex
+		flex-wrap: wrap
+	.destinations-item
+		margin-right: 2.4%
+		&:nth-child(4n+4)
+			margin-right: 0
+		&:last-child
+			margin-bottom: 30px

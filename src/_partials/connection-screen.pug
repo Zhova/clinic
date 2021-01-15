@@ -1,0 +1,22 @@
+mixin connection-screen
+    +b.connection-bg
+        +b.connection.wrap
+            +b.form-wrap
+                +e.title-block
+                    +e.P.title.text_blue.text_medium.text_title-big Запись на прием
+                    +b.del_left
+                +e.input-wrap
+                    select.select(placeholder="hero")
+                        option Выберете направления
+                        option(value="t1")
+                +e.input-wrap
+                    input(type="text" placeholder="Полное имя")
+                +e.input-wrap
+                    input(type="tel" placeholder="Номер телефона")
+                +e.input-wrap
+                    input(type="date" placeholder="Дата приема")
+                +e.input-wrap
+                    input(type="checkbox")
+                +e.input-wrap
+                    input(type="submit").btn_default.btn_red.btn_big
+                
