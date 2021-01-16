@@ -1,0 +1,12 @@
+include ./news-list-screen.pug
+include ./about-screen.pug
+include ./connection-screen.pug
+include ./contacts-screen.pug
+
+
+mixin news_page
+    +b.news-page
+        +news-list-screen
+        +about-screen
+        +connection-screen
+        +contacts-screen

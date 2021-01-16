@@ -1,0 +1,18 @@
+include ./news-item.pug
+
+
+mixin news-list-screen
+    +b.news-screen-bg
+        +b.news-screen.wrap
+            +b.title-default
+                +e.P.title.text_blue.text_medium.text_title-big Новости клиники
+                +e.del_turquoise
+            +b.news-list
+                +news-item
+                +news-item
+                +news-item
+                +news-item
+                +news-item
+                +news-item
+                +news-item
+                +news-item
