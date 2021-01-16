@@ -1,0 +1,10 @@
+include ./single-service-screen.pug
+include ./connection-screen.pug
+include ./contacts-screen.pug
+
+
+mixin single-service_page
+    +b.single-service-page
+        +single-service-screen
+        +connection-screen
+        +contacts-screen

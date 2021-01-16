@@ -45,6 +45,9 @@ a
 	width: 100%
 	max-width: 1146px
 	margin: 0 auto
+	&_small
+		display: flex
+		justify-content: space-between
 
 .slick
 	&-slider
@@ -842,3 +845,164 @@ select > option
 						&::after
 							transition: .3s
 							transform: translateY(-50%) rotate(180deg)
+
+.single-service
+	padding: 80px 0
+	&-bg
+		background: rgba(213, 235, 255, .3)
+
+	&-filter
+		background: #D5EBFF
+		border-radius: 20px
+		&__item
+			border-bottom: 1px solid #E1F1FF
+			padding: 16px 24px
+	&-content
+		max-width: 850px
+		background: #ffffff
+	&-title,&-text
+		margin: 15px 0
+	&-text
+		margin-bottom: 30px
+	.img-info
+		float: left
+		margin-right: 30px
+		margin-bottom: 30px
+		display: block
+		height: 160px
+		width: 280px
+		object-fit: cover
+	.list-item
+		list-style: none
+		padding-left: 27px
+		margin-bottom: 13px
+		position: relative
+		&:last-child
+			margin-bottom: 30px
+
+		&::before
+			content: ''
+			position: absolute
+			left: 0
+			top: 50%
+			transform: translateY(-50%)
+			background: url('../img/check.svg')
+			width: 15px
+			height: 12px
+			background-repeat: no-repeat
+
+	&-header
+		background: #D5EBFF
+		display: flex
+		border-radius: 20px 20px 0 0
+		overflow: hidden
+		margin-bottom: 25px
+		&__img-block
+			min-height: 100%
+			min-width: 360px
+			img
+				object-fit: cover
+				width: 100%
+				height: 100%
+		&__title-block
+			padding: 40px 30px
+		&__desc
+			margin-bottom: 25px
+
+	&-body
+		padding: 0 35px
+		&__stock
+			background: #EDF7FF
+			border-radius: 10px
+			padding: 20px 12px
+			display: flex
+			justify-content: center
+			margin-bottom: 25px
+			.text
+				margin: 0
+	&-slider
+		margin-bottom: 20px
+		&-wrap
+			background: #D5EBFF
+			padding: 40px 80px
+			border-radius: 0 0 20px 20px
+			display: flex
+			flex-direction: column
+			align-items: center
+			margin-bottom: 40px
+			&__title
+				margin-bottom: 23px
+			.list-item
+				margin-bottom: 0 !important
+			.main-slider__arrow
+				width: 36px
+				height: 36px
+				&-right
+					right: -9%
+				&-left
+					left: -9%
+			.slick-dots
+				z-index: 2
+				transform: rotate(-90deg) translateY(-50%)
+				top: auto
+				bottom: -67px
+				right: 0
+				li
+					width: 30px
+					height: 30px
+					&::before
+						width: 18px
+						height: 18px
+					.dots-button-wrap
+						&::before
+							width: 2px
+							bottom: -25px
+				.slick-active
+					&::after
+						width: 12px
+						height: 12px
+	&-price
+		margin-top: 60px
+		display: flex
+		flex-direction: column
+		align-items: center
+		margin-bottom: 60px
+		&__title
+			margin-bottom: 25px
+	.price-table
+		width: 100%
+		border-radius: 20px 20px 0 0
+		&__line
+			min-height: 64px
+			border-bottom: 1px solid #E1F1FF
+
+			&_first
+				background: #D5EBFF
+	&-video-wrap
+		display: flex
+		flex-direction: column
+		align-items: center
+		margin-bottom: 60px
+		&__title
+			margin-bottom: 25px
+		&__video-block
+			width: 100%
+			height: 460px
+			border-radius: 20px
+			overflow: hidden
+			video
+				width: 100%
+				height: 100%
+				object-fit: cover
+
+	&-our-doctors
+		display: flex
+		flex-direction: column
+		align-items: center
+		margin-bottom: 60px
+		&__title
+			margin-bottom: 25px
+
+	.btn_slider
+		transform: translate(0)
+		position: static

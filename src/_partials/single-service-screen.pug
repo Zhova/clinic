@@ -1,0 +1,92 @@
+mixin single-service-screen
+    +b.single-service-bg
+        +b.single-service.wrap_small
+            +b.sidebar
+                +b.single-service-filter
+                    +e.item
+                        a.text_regular.text_blue.text_medium Лазерная эпиляция Moveo
+                    +e.item
+                        a.text_regular.text_blue.text_medium Лазерная эпиляция Moveo
+                    +e.item
+                        a.text_regular.text_blue.text_medium Лазерная эпиляция Moveo
+                    +e.item
+                        a.text_regular.text_blue.text_medium Лазерная эпиляция Moveo
+                    +e.item
+                        a.text_regular.text_blue.text_medium Лазерная эпиляция Moveo
+            +b.single-service-content
+                +b.single-service-header
+                    +e.img-block    
+                        img(src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg", alt="alt")
+                    +e.title-block
+                        +e.P.title.text_blue.text_medium.text_title-big Дерматоонкология
+                        +b.del_left
+                        +e.P.desc.text_gray.text_regular MyDerm — специализируеться на диагностике и лечении болезней кожи доброкачественного и злокачественного происхождения
+                        +b.A.btn_default.btn_red.btn_big(href="#") Запись онлайн
+                +b.single-service-body
+                    +e.stock
+                        +e.P.stock-text.text_title._blue._medium Мы предоставляем скидку в 50% на первую процедуру!
+                    p.single-service-title.text_title-medium.text_medium.text_blue Дерматоонкология в Киеве
+                    p.single-service-text.text_gray.text_regular Отделение дерматоонкологиии в клинике MyDerm — специализируеться на диагностике и лечении болезней кожи доброкачественного и злокачественного происхождения. При помощи современного оборудования (цифровой дерматоскопии) и методов диагностики и лечения, удаёться обнаружить рак на начальной стадии развития, что существенно улучшает прогноз выживаемости пациентов.
+                    p.single-service-title.text_title-medium.text_medium.text_blue Цифровая дерматоскопия – современный метод диагностики
+                    img(src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg", alt="alt").img-info
+                    p.single-service-text.text_gray.text_regular Онкопатологии кожи занимают приблизительно четвертую часть в мировой статистике заболеваний, таким образом рак кожи являеться самой распространённым онкологическим заболеванием. 
+                    p.single-service-text.text_gray.text_regular Число пациентов с разными видами рака кожи неуклонно растет, причем зачастую патология диагностируется на запущенных стадиях. 
+                    p.single-service-text.text_gray.text_regular Цифровая дерматоскопия – это современный метод в инструментарной диагностике новообразований в дерматоонкологии. Данный метод дает возможность под многократным увеличением осмотреть образование, оценить размеры, структуру, контуры.
+                    p.single-service-title.text_title-medium.text_medium.text_blue Что мы лечим?
+                    p.single-service-text.text_gray.text_regular В отделении дерматологии проводится профессиональная диагностика, профилактика и лечение всех заболеваний кожи, любых патологий ногтей и волос. Среди наиболее распространенных заболеваний встречается:
+                    ul.list
+                        li.list-item.text_gray.text_regular угревая сыпь (акне);
+                        li.list-item.text_gray.text_regular угревая сыпь (акне);
+                        li.list-item.text_gray.text_regular угревая сыпь (акне);
+                    p.single-service-text.text_gray.text_regular Кроме того, мы проводим: биоревитализацию лица и тела, фототерапию, плазмолифтинг, увеличение губ, криомассажи, патогистологические исследования, криодеструкцию и многое другое. 
+                    p.single-service-text.text_gray.text_regular Ваши возможности в «MyDerm» – точная диагностика и быстрое лечение всех заболеваний кожи, ногтей и волос. Наш медицинский центр поддерживает тесные связи с передовыми европейскими клиниками и использует лучшие методики доступные в мировой дерматологии.
+                +b.single-service-slider-wrap
+                    +e.P.title.text_title-medium._medium._blue Результаты лечения
+                    +b.single-service-slider
+                        +e.item
+                            img(src="./img/result.png", alt="alt")
+                        +e.item
+                            img(src="./img/result.png", alt="alt")
+                    li.list-item.text_gray.text_regular угревая сыпь (акне);
+                +b.A.btn_default._red._big.btn-lines_red._center(href="#") Запись онлайн
+                +b.single-service-price
+                    +e.P.title.text_title-medium._medium._blue Цены на услуги 
+                    +b.price-table.text_blue 
+                        +e.item
+                            +e.line_first.name-service.text_average
+                                p.text_medium Название услуги
+                                p.text_medium Цена, ₴
+                            +e.line.text_regular
+                                p Патч-тесты Европейская баз.скрининг серия (3 пл. Ultra с ТОП-30 гаптенами)
+                                p.text_medium 2 800,00
+                            +e.line.text_regular
+                                p Патч-тесты Европейская баз.скрининг серия (3 пл. Ultra с ТОП-30 гаптенами)
+                                p.text_medium 2 800,00
+                +b.single-service-video-wrap
+                    +e.P.title.text_title-medium._medium._blue Посмотрите видео о услуге
+                    +e.video-block
+                        video(controls preload poster="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg")
+                            source(src="https://www.youtube.com/watch?v=06Dxl14yOOw" type="video/mp4")
+                +b.single-service-our-doctors
+                    +e.P.title.text_title-medium._medium._blue Наши дерматологи
+                    +b.specialists-slider
+                        +e.item
+                            +specialists-item
+                        +e.item
+                            +specialists-item
+                        +e.item
+                            +specialists-item
+                        +e.item
+                            +specialists-item
+                        +e.item
+                            +specialists-item
+                    +b.A.btn_default.btn_red.btn_big.btn_slider(href="#") Запись онлайн
+
+
+
+
+                        
+
+
+ 
+        

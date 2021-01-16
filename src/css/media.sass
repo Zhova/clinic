@@ -17,6 +17,9 @@
 // =============== tablet 
 @media screen and (max-width: 1199px)
 
+    .wrap_small
+        flex-direction: column
+
     .text
         &_regular
             font-size: 12px
@@ -60,6 +63,27 @@
     .header
         .addresses,.right
             width: auto
+        .phones-drop,.social,.search
+            display: none
+        .addresses__first
+            margin-right: 40px
+        .header-bottom
+            position: relative
+            .nav
+                &-menu
+                    display: none
+                    position: absolute
+                    text-align: center
+                    background: #ffffff
+                    width: 100%
+                    min-height: 300px
+                    left: 0
+                &-list
+                    flex-direction: column
+                    height: 100%
+                    width: 100%
+                    margin: 0
+
     .main
         padding-top: 44px
         &-slider
@@ -128,6 +152,10 @@
         .news-item
             &:nth-child(3n+3)
                 margin-right: 2.4%
+
+    .single-service
+        .sidebar
+            margin-bottom: 25px
 
 // =============== mobile
 @media screen and (max-width: 767px)
@@ -203,3 +231,12 @@
                 &.active
                     .price-table__line
                         padding: 15px
+
+    .single-service
+        &-header
+            flex-direction: column
+
+        &-body
+            padding: 0 20px
+        &-slider-wrap
+            padding: 40px 20px
