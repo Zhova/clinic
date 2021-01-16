@@ -46,5 +46,13 @@ $(document).ready(function () {
     }]
   });
   $(".slick-dots li button").text("");
-  $(".slick-dots li button").wrap("<div class='dots-button-wrap'></div>");
+  $(".slick-dots li button").wrap("<div class='dots-button-wrap'></div>"); // btn lines
+
+  $(".btn-lines").wrap('<div class="btn-lines-wrap"></div>');
+  $(".btn-lines_red").before('<div class="btn-line btn-line_red btn-line_before"></div>');
+  $(".btn-lines_red").after('<div class="btn-line btn-line_red btn-line_after"></div>'); // price table
+
+  $(".price-table__line_head").on("click", function () {
+    $(this).parent().toggleClass("active");
+  });
 });

@@ -1,0 +1,11 @@
+include ./specialists-list-screen.pug
+include ./reviews-screen.pug
+include ./connection-screen.pug
+include ./contacts-screen.pug
+
+mixin specialists_page
+    +b.specialists-page
+        +specialists-list-screen
+        +reviews-screen
+        +connection-screen
+        +contacts-screen

@@ -91,7 +91,8 @@
     .news,
     .reviews,
     .connection,
-    .contacts
+    .contacts,
+    .price-screen
         padding: 50px 0
 
     .whyChoice
@@ -178,3 +179,19 @@
             min-height: 400px
             iframe
                 min-height: 400px
+
+    .price
+        &-table
+            &__line
+                p
+                    max-width: 70%
+                &_head
+                    padding: 15px
+                    p
+                        max-width: 90%
+                    &::after
+                        right: 15px
+            &__item
+                &.active
+                    .price-table__line
+                        padding: 15px

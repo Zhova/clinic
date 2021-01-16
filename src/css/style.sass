@@ -201,6 +201,34 @@ select > option
 		position: relative
 		left: 50%
 		transform: translateX(-50%)
+	&-lines
+		position: relative
+		margin: 0 27px
+		&_red
+			&::after
+				background: red
+				right: -200%
+			&::before
+				background: red
+				right: 100%
+	&_center
+		position: relative
+		left: 50%
+		transform: translateX(-50%)
+
+.btn
+	&-lines-wrap
+		width: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+	&-line
+		width: 50%
+		height: 2px
+		&_red
+			background: linear-gradient(90deg, rgba(248,115,115,1) 0%, rgba(248,115,115,0.14889705882352944) 100%)
+		&_before
+			transform: rotate(180deg)
 
 .del
 	&_left
@@ -238,6 +266,8 @@ select > option
 			font-size: 24px
 		&-big
 			font-size: 40px
+	&_average
+		font-size: 18px
 	&_small
 		font-size: 14px
 		&-extra
@@ -255,7 +285,7 @@ select > option
 	display: flex
 	flex-direction: column
 	align-items: center
-	margin-bottom: 30px
+	margin-bottom: 40px
 	&__title
 		margin-bottom: 21px
 	&__del
@@ -728,3 +758,73 @@ select > option
 			margin-right: 0
 		&:last-child
 			margin-bottom: 30px
+.specialists-page
+	.specialists
+		padding: 0
+		&-list
+			&-bg
+				padding: 110px 0
+			&-content
+				display: flex
+				flex-wrap: wrap
+			.specialists-item
+				margin-right: 2.4%
+				margin-bottom: 30px
+				&:nth-child(4n+4)
+					margin-right: 0
+				&:last-child
+					margin-bottom: 30px
+.price-table
+	.line
+		display: flex
+		justify-content: space-between
+
+.price
+	&-screen
+		padding: 100px 0
+		&-mark
+			margin-top: 60px
+			p
+				margin-bottom: 20px
+	&-table
+		border-radius: 20px
+		overflow: hidden
+		margin-bottom: 40px
+
+		&__line
+			display: flex
+			align-items: center
+			justify-content: space-between
+			padding: 0 40px
+			position: relative
+			height: 0
+			overflow: hidden
+			&_head
+				background: #D5EBFF
+				border-bottom: 1px solid #DEF0FF
+				cursor: pointer
+				min-height: 64px
+				&::after
+					content: ''
+					position: absolute
+					right: 40px
+					top: 50%
+					transform: translateY(-50%)
+					background: url('../img/price-drop-down.svg')
+					width: 34px
+					height: 34px
+					transition: .3s
+			&_first
+				background: #EDF7FF
+		&__item
+			&.active
+				.price-table__line
+					border-bottom: 1px solid #E1F1FF
+					min-height: 64px
+					padding: 20px 40px
+					height: auto
+
+					&_head
+						&::after
+							transition: .3s
+							transform: translateY(-50%) rotate(180deg)
