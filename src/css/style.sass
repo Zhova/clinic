@@ -263,6 +263,7 @@ select > option
 	line-height: 1
 	&_regular
 		font-size: 16px
+		line-height: 19px
 	&_title
 		font-size: 20px
 		&-medium
@@ -273,6 +274,7 @@ select > option
 		font-size: 18px
 	&_small
 		font-size: 14px
+		line-height: 18px
 		&-extra
 			font-size: 13px
 	&_gray
@@ -358,6 +360,31 @@ select > option
 	&-bottom
 		min-height: 80px
 		justify-content: space-between
+
+	.burger
+		display: none
+		width: 24px
+		z-index: 9999
+		&__line
+			width: 100%
+			height: 2px
+			background: #00386D
+			border-radius: 32px
+			margin-bottom: 5px
+			transform-origin: 9% 50%
+			transition: .5s
+			&:nth-child(2)
+				&.active
+					opacity: 0
+					transition: .5s
+			&:nth-child(1)
+				&.active
+					transform: rotate(45deg)
+					transition: .5s
+			&:nth-child(3)
+				&.active
+					transform: rotate(-45deg)
+					transition: .5s
 
 .main-bg
 	background: url('../img/mainBG.png')
@@ -840,17 +867,15 @@ select > option
 					min-height: 64px
 					padding: 20px 40px
 					height: auto
-
 					&_head
 						&::after
 							transition: .3s
 							transform: translateY(-50%) rotate(180deg)
 
-.single-service
+.single-service,.doc-screen
 	padding: 80px 0
 	&-bg
 		background: rgba(213, 235, 255, .3)
-
 	&-filter
 		background: #D5EBFF
 		border-radius: 20px
@@ -961,6 +986,12 @@ select > option
 					&::after
 						width: 12px
 						height: 12px
+	.main-slider__arrow
+		top: 50%
+		bottom: auto
+		transform: translateY(-50%)
+		&-left
+			transform: translateY(-50%) rotate(180deg)
 	&-price
 		margin-top: 60px
 		display: flex
@@ -1006,3 +1037,85 @@ select > option
 	.btn_slider
 		transform: translate(0)
 		position: static
+
+.doc-screen
+	display: flex
+	justify-content: space-between
+	.reviews-item
+		max-width: 260px
+		&::before
+			display: none
+	&-content
+		background: transparent
+	&-header
+		&-wrap
+			background: #ffffff
+			border-radius: 20px
+			overflow: hidden
+			margin-bottom: 100px
+		&__title
+			font-size: 30px
+		&__sub-title
+			margin-bottom: 15px
+		&__img-block
+			position: relative
+			min-width: 264px
+		&__regalia
+			background: #D5EBFF
+			border-radius: 10px
+			width: 115px
+			min-height: 46px
+			position: absolute
+			bottom: 10px
+			padding: 7px 12px
+			display: flex
+			align-items: center
+			p
+				&:nth-child(2)
+					margin-left: 15px
+			&_first
+				left: 12px
+			&_second
+				right: 12px
+		&-about
+			padding: 30px 35px
+			padding-top: 15px
+			&__title
+				margin-bottom: 15px
+	&-table-more
+		display: flex
+		flex-direction: column
+		align-items: center
+		margin-bottom: 30px
+		&__title
+			margin-bottom: 25px
+
+	.price-table
+		border-radius: 20px
+		&__line
+			min-height: 0
+			&_head
+				min-height: 64px
+				&::after
+					background: url('../img/plus.svg')
+					background-size: contain
+					background-repeat: no-repeat
+		&__item
+			&.active
+				.price-table__line_head::after
+					background: url('../img/minus.svg')
+					background-size: contain
+					background-repeat: no-repeat
+
+	&-slider-wrap
+		margin: 60px 0
+		padding-bottom: 100px
+		border-radius: 20px
+		.slick-dots
+			bottom: -130px
+			left: 50%
+			transform: translateX(-50%) rotate(-90deg)
+			top: auto
+	.slider-certificates__item
+		display: flex !important
+		justify-content: center

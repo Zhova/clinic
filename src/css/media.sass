@@ -61,14 +61,20 @@
         width: 95%
 
     .header
+        width: 100%
         .addresses,.right
             width: auto
         .phones-drop,.social,.search
             display: none
         .addresses__first
             margin-right: 40px
-        .header-bottom
+        &-top
+            display: none
+        &-bottom
             position: relative
+            padding: 0 5%
+            .btn
+                display: none
             .nav
                 &-menu
                     display: none
@@ -76,13 +82,19 @@
                     text-align: center
                     background: #ffffff
                     width: 100%
+                    height: 1px
                     min-height: 300px
                     left: 0
+                    top: 80px
+                    z-index: 1
                 &-list
                     flex-direction: column
                     height: 100%
                     width: 100%
                     margin: 0
+                    justify-content: space-around
+        .burger
+            display: block
 
     .main
         padding-top: 44px
@@ -153,9 +165,31 @@
             &:nth-child(3n+3)
                 margin-right: 2.4%
 
-    .single-service
+    .single-service,.doc-screen
+        &-slider-wrap
+            padding: 30px 50px
         .sidebar
             margin-bottom: 25px
+
+        .main-slider__arrow
+            &-right
+                right: -12%
+            &-left
+                left: -12%
+
+    .doc-screen
+        .reviews-item
+            max-width: none
+        &-header
+            flex-direction: column
+            &__title
+                font-size: 24px
+                &-block
+                    padding: 20px 15px
+            &-about
+                padding: 15px
+        &-slider-wrap
+            padding-bottom: 100px
 
 // =============== mobile
 @media screen and (max-width: 767px)
@@ -173,6 +207,11 @@
         &-left
             &::before
                 transform: translate(-50%, -50%) rotate(180deg)
+
+    .header
+        .addresses
+            display: none
+
     .whyChoice
         flex-direction: column-reverse
         &__left,&__right

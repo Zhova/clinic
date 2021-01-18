@@ -19,7 +19,7 @@ mixin header
 			+b.A.logo(href="#")
 				img(src='./img/logo.png')
 			+b.NAV.nav-menu
-				+b.UL.nav-lIst
+				+b.UL.nav-list
 					+e.LI.item
 						a(href="#") Направления
 					+e.LI.item
@@ -32,5 +32,9 @@ mixin header
 						a(href="#") Новости
 					+e.LI.item
 						a(href="#") Контакты
+			+b.burger
+				+e.line
+				+e.line
+				+e.line
 			+b.A.btn_default.btn_red.btn_big(href="#") Запись онлайн
 				

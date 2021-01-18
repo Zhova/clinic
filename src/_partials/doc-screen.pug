@@ -1,0 +1,82 @@
+    
+mixin doc-screen
+    +b.doc-screen-bg
+        +b.doc-screen.wrap_small
+            +b.doc-screen-content
+                +b.doc-screen-header-wrap
+                    +b.doc-screen-header
+                        +e.img-block.text_blue._small   
+                            img(src="./img/main-doc.png", alt="alt")
+                            +e.regalia_first
+                                +e.P.experience.text_title-medium.text_medium 6
+                                +e.P.text.text_medium лет опыта
+                            +e.regalia_second
+                                +e.P.text.text_medium Врач второй категории
+                        +e.title-block
+                            +e.P.title.text_blue.text_medium Круль Юлиан Петрович
+                            +b.del_left
+                            +e.P.sub-title.text_regular._blue._medium Хирург, флеболог, пластический хирург, онколог
+                            +e.P.desc.text_gray.text_regular MyDerm — специализируеться на диагностике и лечении болезней кожи доброкачественного и злокачественного происхождения
+                            +b.A.btn_default.btn_red.btn_big(href="#") Запись онлайн
+                    +b.doc-screen-header-about
+                        +e.P.title.text_title-medium._medium._blue О враче
+                        +e.P.desc.text_gray._regular  Юлиан Петрович – владеет хирургическими методами для восстановления правильного функционирования вен и артерий, а также исправления эстетических дефектов. Занимается реконструктивными методами лечения дефектов кожи, лоскутарная пластика, лечением базальноклеточного, плоскоклеточного раков кожи, меланомы.
+                +b.doc-screen-table-more
+                    +e.P.title.text_title-medium._medium._blue Подробная информация 
+                    +b.price-table.text_blue
+                        +e.item
+                            +e.line_head
+                                +e.P.title.line.text_title.text_medium Консультации специалистов
+                            +e.line.text_regular
+                                p Патч-тесты Европейская баз.скрининг серия (3 пл. Ultra с ТОП-30 гаптенами)
+                            +e.line.text_regular
+                                p Патч-тесты Европейская баз.скрининг серия (3 пл. Ultra с ТОП-30 гаптенами)
+                        +e.item
+                            +e.line_head
+                                +e.P.title.line.text_title.text_medium Консультации специалистов
+                            +e.line.text_regular
+                                p Патч-тесты Европейская баз.скрининг серия (3 пл. Ultra с ТОП-30 гаптенами)
+                            +e.line.text_regular
+                                p Патч-тесты Европейская баз.скрининг серия (3 пл. Ultra с ТОП-30 гаптенами)
+                +b.A.btn_default._red._big.btn-lines_red._center(href="#") Запись онлайн
+
+                +b.doc-screen-slider-wrap
+                    +e.P.title.text_title-medium._medium._blue Сертификаты врача
+                    +b.slider-certificates
+                        +e.item
+                            img(src="./img/sert.png", alt="alt")
+                        +e.item
+                            img(src="./img/sert.png", alt="alt")
+                        +e.item
+                            img(src="./img/sert.png", alt="alt")
+                        +e.item
+                            img(src="./img/sert.png", alt="alt")
+                +b.single-service-our-doctors
+                    +e.P.title.text_title-medium._medium._blue Наши дерматологи
+                    +b.specialists-slider
+                        +e.item
+                            +specialists-item
+                        +e.item
+                            +specialists-item
+                        +e.item
+                            +specialists-item
+                        +e.item
+                            +specialists-item
+                        +e.item
+                            +specialists-item
+                    +b.A.btn_default.btn_red.btn_big.btn_slider(href="#") Запись онлайн
+            +b.sidebar
+                +b.reviews-item
+                    +e.header
+                        +e.avatar
+                            img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjaEry2x7WJs8zWGwtcaAZ6ILmmbfvlW2iZQ&usqp=CAU", alt="alt")
+                        +e.title-block
+                            +e.P.name.text_blue.text_regular Виктория Иванова
+                            +e.stars
+                                img(src="./img/star.png", alt="alt") 
+                                img(src="./img/star.png", alt="alt") 
+                                img(src="./img/star.png", alt="alt") 
+                    +e.P.desc.text_gray.text_small В этой клинике лечилась у подолога Славинской Лилии. Осталась довольна , хороший специалист. Клиникой тоже довольна, чисто, вежливые работники. Все вылечили, спасибо))
+                    +e.footer
+                        +e.P.date 11 months ago
+                        +e.A.more Полный отзыв
