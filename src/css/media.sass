@@ -129,7 +129,8 @@
     .connection,
     .contacts,
     .price-screen,
-    .news-page .news-screen
+    .news-page .news-screen,
+    .analysis
         padding: 50px 0
 
     .whyChoice
@@ -190,6 +191,12 @@
                 padding: 15px
         &-slider-wrap
             padding-bottom: 100px
+
+    .analysis
+        .go-price-block
+            flex-direction: column-reverse
+            &__text
+                padding: 25px
 
 // =============== mobile
 @media screen and (max-width: 767px)
@@ -279,3 +286,18 @@
             padding: 0 20px
         &-slider-wrap
             padding: 40px 20px
+
+    .analysis
+        &-block
+            flex-direction: column
+            align-items: center
+            &_first
+                .analysis-list
+                    margin-right: 0
+            &_second
+                flex-direction: column-reverse
+                .analysis-list
+                    margin-bottom: 30px
+                    margin-left: 0
+        &-list
+            width: 100%
